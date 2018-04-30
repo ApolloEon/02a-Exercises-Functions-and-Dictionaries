@@ -9,7 +9,7 @@ You can copy lines from this file into IDLE to interpret them and produce a resu
 You will also need to answer several questions to show you understand what is happening. 
 
 
-'''
+
 # Paste the following lines into IDLE, and then enter the result in the comment following the block
 example_list = [1,17,20]
 s = 0
@@ -41,7 +41,7 @@ print(set_to_list)
 # What qualities of a python set do you see in the (above) example?
 #
 # In what situations might a python set be a useful data structure?
-#
+#A python set would be good for when you're giving groups of things
 
 # --------------------------------------------------
 
@@ -84,7 +84,7 @@ print(product_list([-2,3,-4,5,-6]))
 #
 
 # --------------------------------------------------
-
+'''
 # Paste the following lines into IDLE, and then enter the results in the comments following the block
 def is_leap_year(year):
 	'''
@@ -102,24 +102,30 @@ def is_leap_year(year):
 	except TypeError:
 		leap = False
 	return leap
+
 years = [2017,2018,2000,2100,2400,"This isn't even a year"]
 for y in years:
 	if is_leap_year(y):
 		print(str(y) + ': I get an extra day this year!')
 	else:
 		print(str(y) + ': Just 365 for me')
-#
-#
+'''
+#2017: Just 365 for me
+2018: Just 365 for me
+2000: I get an extra day this year!
+2100: Just 365 for me
+2400: I get an extra day this year!
+This isn't even a year: Just 365 for me
 #
 #
 #
 #
 # What is happening in the (above) example?
-#
+#In the example above, as each year passes, there are arithmetic equations checking to see if it's a leap year or not.
 # What is the purpose for the multi-line comment at the beginning of the is_leap_year function?
-#
+#The purpose of the multi-line comment is show us or give us an example of what happens as the years go by.
 # What happens if you pass a value to the function that isn't a year? Why?
-#
+#When you pass a value to a function that isn't a year, it would return "Just 365 for me" because of the if/else cmd.
 
 # --------------------------------------------------
 
@@ -145,34 +151,36 @@ for i in range(0,10):
 		print('%d: buzz'%i)
 	else:
 		print(i)
+
+#fizzbuzz
 #
+#buzz
+#fizz
+#buzz
 #
+#fizzbuzz
 #
-#
-#
-#
-#
-#
-#
-#
+#buzz
+#fizz
+
 # What is happening in this example?
-#
+#In the example above, it's printing out fizz, buzz, fizzbuzz, and sometimess nothing
 # How would you alter the program so that it prints fizz on multiples of 5 and buzz on multiples of 4?
-#
+#I would change their '%' number to 5(fizz) and 4(buzz)
 # We actually don't want the program to print fizzbuzz when i <= 0. How would you fix this problem?
-#
+#Maybe change what is equal to 0 then. Maybe to 1.
 # How would you alter the program so that it prints your name whenever both conditions are met?
-#
+#Change the print statement.
 
 # --------------------------------------------------
 
 # Paste the following lines into IDLE, and then enter the results in the comments following the block
 def get_option(options):
-	'''
+
 	Prints out the choices for this location and invites the player to make a selection
 	Parameters: options is a list of dictionaries {choice, location}; choice is a string and location is an int
 	Returns: location if one is available and selected, 0 otherwise
-	'''
+
 	to_return = 0
 	if len(options) == 0:
 		print('The end!')
@@ -219,10 +227,10 @@ script = [
 starting = 0
 get_option(script[starting]['options'])
 # What is happening in this block of code?
-#
+#You're creating a world in which players can interact.
 # What does the get_option function do?
-#
+#It allows people to choose different scenarios.
 # How would you display the description of the current location?
 #
 # How would you display the description of the next location (after selecting an option)?
-#
+'''
